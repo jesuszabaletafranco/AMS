@@ -1,0 +1,94 @@
+﻿@model AMS.Models.Usuario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UsuarioID" />
+            <div class="form-group">
+                <label asp-for="NombreUsuario" class="control-label"></label>
+                <input asp-for="NombreUsuario" class="form-control" />
+                <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Numero_Documento" class="control-label"></label>
+                <input asp-for="Numero_Documento" class="form-control" />
+                <span asp-validation-for="Numero_Documento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Razon_Social" class="control-label"></label>
+                <input asp-for="Razon_Social" class="form-control" />
+                <span asp-validation-for="Razon_Social" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Primer_Nombre" class="control-label"></label>
+                <input asp-for="Primer_Nombre" class="form-control" />
+                <span asp-validation-for="Primer_Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Segundo_Nombre" class="control-label"></label>
+                <input asp-for="Segundo_Nombre" class="form-control" />
+                <span asp-validation-for="Segundo_Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Primer_Apellido" class="control-label"></label>
+                <input asp-for="Primer_Apellido" class="form-control" />
+                <span asp-validation-for="Primer_Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Segundo_Apellido" class="control-label"></label>
+                <input asp-for="Segundo_Apellido" class="form-control" />
+                <span asp-validation-for="Segundo_Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Correo" class="control-label"></label>
+                <input asp-for="Correo" class="form-control" />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatePassword" class="control-label"></label>
+                <input asp-for="UpdatePassword" class="form-control" />
+                <span asp-validation-for="UpdatePassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo_DocumentoID" class="control-label"></label>
+                <input asp-for="Tipo_DocumentoID" class="form-control" />
+                <span asp-validation-for="Tipo_DocumentoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo_personaID" class="control-label"></label>
+                <input asp-for="Tipo_personaID" class="form-control" />
+                <span asp-validation-for="Tipo_personaID" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Estado" /> @Html.DisplayNameFor(model => model.Estado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha_Ultima_Modificacion" class="control-label"></label>
+                <input asp-for="Fecha_Ultima_Modificacion" class="form-control" />
+                <span asp-validation-for="Fecha_Ultima_Modificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

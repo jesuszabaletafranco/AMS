@@ -1,0 +1,25 @@
+Modulo de Administracion
+* Usuarios (Add/Edit/Activate/deactivate, Roles)
+* Roles (CRUD)
+* Permisos
+* Cargue de BDT e Imagenes (Proceso en Batch) Mostrar resumen de cargue
+* Sincronizacion de BDT (Proceso en Batch)
+* Generacion de Alertas
+* Asignacion de Cuentas a Auditores
+* Gestion de Calidad (Corregir o Devolver la Cuenta)
+* Generacion de Resultados BDT
+* Parametrizacion
+* Glosas (CRUD)
+
+Modulo Auditoria
+* Gestion Documental
+* Gestion Medica
+* Gestion Juridica
+* Gestion Financiera
+* Gestion de Calidad
+* Informes
+
+Ams2023+-
+
+Brandon.Lujano
+BLujano01.

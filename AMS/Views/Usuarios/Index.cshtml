@@ -1,0 +1,107 @@
+﻿@model IEnumerable<AMS.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreUsuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Razon_Social)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Primer_Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Segundo_Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Primer_Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Segundo_Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatePassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_DocumentoID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_personaID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Ultima_Modificacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_Documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Razon_Social)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Primer_Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Segundo_Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Primer_Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Segundo_Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatePassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_DocumentoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_personaID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Ultima_Modificacion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UsuarioID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UsuarioID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UsuarioID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
